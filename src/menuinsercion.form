@@ -24,7 +24,7 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Cedula"/>
+          <text value="Precio"/>
           <toolTipText value="Aqui va la cedula"/>
         </properties>
       </component>
@@ -33,7 +33,7 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Calificacion 1"/>
+          <text value="Genero"/>
           <toolTipText value="Ingresa la primera calificación"/>
         </properties>
       </component>
@@ -42,7 +42,7 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Calificacion 2"/>
+          <text value="Foto"/>
           <toolTipText value="Ingresa la segunda calificación"/>
         </properties>
       </component>
@@ -54,7 +54,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="3b4d5" class="javax.swing.JTextField" binding="cedulaText">
+      <component id="3b4d5" class="javax.swing.JTextField" binding="Precio">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -62,7 +62,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="73af2" class="javax.swing.JTextField" binding="c1Text">
+      <component id="73af2" class="javax.swing.JTextField" binding="Genero">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -70,7 +70,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="ab254" class="javax.swing.JTextField" binding="c2Text">
+      <component id="ab254" class="javax.swing.JTextField" binding="Foto">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -113,6 +113,14 @@
         </constraints>
         <properties>
           <text value=""/>
+        </properties>
+      </component>
+      <component id="c6375" class="javax.swing.JButton" binding="datosButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Datos"/>
         </properties>
       </component>
     </children>

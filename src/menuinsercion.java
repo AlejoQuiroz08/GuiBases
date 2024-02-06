@@ -1,17 +1,19 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class menuinsercion {
     private JButton conexionABaseDeButton;
     public JPanel menu;
     private JLabel mensajeTxt;
     private JTextField nombreText;
-    private JTextField cedulaText;
-    private JTextField c1Text;
-    private JTextField c2Text;
+    private JTextField Precio;
+    private JTextField Genero;
+    private JTextField Foto;
     private JButton insertarButton;
     private JButton borrarCamposButton;
+    private JButton datosButton;
 
     public menuinsercion() {
         conexionABaseDeButton.addActionListener(new ActionListener() {
@@ -26,17 +28,30 @@ public class menuinsercion {
             @Override
             public void actionPerformed(ActionEvent e) {
                 nombreText.setText("");
-                cedulaText.setText("");
-                c1Text.setText("");
-                c2Text.setText("");
+                Precio.setText("");
+                Genero.setText("");
+                Foto.setText("");
             }
         });
         insertarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                InsertarDatos insercion= new InsertarDatos();
-                insercion.InsertarDatos(nombreText.getText(), cedulaText.getText(), Integer.parseInt(c1Text.getText()) , Integer.parseInt(c2Text.getText()));
-
+                Juegos nuevos= new Juegos();
+                try {
+                    nuevos.agregaraBD(nombreText.getText(),Double.parseDouble(Precio.getText()), Genero.getText(), Foto.getText());
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+        datosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame Mostrar = new JFrame("Datos");
+                Mostrar.setContentPane(new Mostrar().mostrartabla);
+                Mostrar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                Mostrar.setSize(400, 400);
+                Mostrar.setVisible(true);
             }
         });
     }
